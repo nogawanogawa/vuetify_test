@@ -28,7 +28,7 @@
       <v-form>
         <v-container>
           <v-layout align-start justify-end row>
-            <v-flex xs12 sm6 md3>
+            <v-flex xs4 sm6 md3>
               <v-text-field label="Search"></v-text-field>
             </v-flex>
             <v-btn outline small fab color="indigo">
@@ -37,8 +37,7 @@
           </v-layout>
         </v-container>
       </v-form>
-
-      <Dialog/>
+      <Process/>
     </v-content>
     <v-footer color="indigo" app>
       <span class="white--text">&copy; 2017</span>
@@ -47,7 +46,7 @@
 </template>
 
 <script>
-import Dialog from "./components/Dialog.vue";
+import Process from "@/components/templates/Process.vue";
 
 export default {
   name: "app",
@@ -55,7 +54,7 @@ export default {
     drawer: null
   }),
   components: {
-    Dialog
+    Process
   },
   props: {
     source: String
