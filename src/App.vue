@@ -24,8 +24,10 @@
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>Application</v-toolbar-title>
     </v-toolbar>
-    <v-content>
+    <v-content>調理工程
       <Process/>
+      <v-divider></v-divider>ほげほげ
+      <Cytoscape/>
     </v-content>
     <v-footer color="indigo" app>
       <span class="white--text">&copy; 2017</span>
@@ -35,6 +37,7 @@
 
 <script>
 import Process from "@/components/templates/Process.vue";
+import Cytoscape from "@/components/atoms/Cytoscape.vue";
 
 export default {
   name: "app",
@@ -42,7 +45,8 @@ export default {
     drawer: null
   }),
   components: {
-    Process
+    Process,
+    Cytoscape
   },
   props: {
     source: String

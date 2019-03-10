@@ -1,47 +1,52 @@
 <template>
-  <div class="text-xs-center">
-    <v-dialog v-model="dialog" width="800" height="500">
-      <template class="center" v-slot:activator="{ on }">
-        <v-btn color="red lighten-2" depressed="true" dark v-on="on">Detail</v-btn>
+  <v-layout row justify-center>
+    <v-dialog v-model="dialog" fullscreen hide-overlay transition="dialog-bottom-transition">
+      <template v-slot:activator="{ on }">
+        <v-btn color="primary" dark v-on="on">Open Dialog</v-btn>
       </template>
-      <v-card class="mx-auto">
-        <v-flex xs12>
-          <v-toolbar width="40" color="indigo">
-            <v-toolbar-title class="white--text">{{title}}</v-toolbar-title>
-            <v-spacer></v-spacer>
-            <div class="close-button" @click="dialog = false">
-              <v-icon color="white">close</v-icon>
-            </div>
-          </v-toolbar>
-          <div class="textarea">
-            <TitleArea></TitleArea>
-            <TextArea></TextArea>
-          </div>
-        </v-flex>
-
-        <v-card-actions>
+      <v-card>
+        <v-toolbar dark color="primary">
+          <v-btn icon dark @click="dialog = false">
+            <v-icon>close</v-icon>
+          </v-btn>
+          <v-toolbar-title>Settings</v-toolbar-title>
           <v-spacer></v-spacer>
-          <v-btn color="primary" flat @click="dialog = false">Update</v-btn>
-        </v-card-actions>
+          <v-toolbar-items>
+            <v-btn dark flat @click="dialog = false">Save</v-btn>
+          </v-toolbar-items>
+        </v-toolbar>
+        <v-list three-line subheader>
+          <v-subheader>User Controls</v-subheader>
+          <v-list-tile avatar>
+            <v-list-tile-content>
+              <v-list-tile-title>Content filtering</v-list-tile-title>
+              <v-list-tile-sub-title>Set the content filtering level to restrict apps that can be downloaded</v-list-tile-sub-title>
+            </v-list-tile-content>
+          </v-list-tile>
+          <v-list-tile avatar>
+            <v-list-tile-content>
+              <v-list-tile-title>Password</v-list-tile-title>
+              <v-list-tile-sub-title>Require password for purchase or use password to restrict purchase</v-list-tile-sub-title>
+            </v-list-tile-content>
+          </v-list-tile>
+        </v-list>
+        <v-divider></v-divider>
       </v-card>
     </v-dialog>
-  </div>
+  </v-layout>
 </template>
 
 <script>
-import TextArea from "@/components/atoms/TextArea.vue";
-import TitleArea from "@/components/atoms/TitleArea.vue";
-
 export default {
   name: "Dialog",
-  components: {
-    TextArea,
-    TitleArea
-  },
+  components: {},
   props: ["title", "detail"],
   data() {
     return {
-      dialog: false
+      dialog: false,
+      notifications: false,
+      sound: true,
+      widgets: false
     };
   }
 };

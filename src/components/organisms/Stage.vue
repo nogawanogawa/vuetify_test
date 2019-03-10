@@ -1,12 +1,12 @@
 <template>
   <div class="card">
-    <v-card color="indigo" class="white--text" width="250">
+    <v-card color="indigo" class="white--text" height="140px">
       <div class="close-button" @click="removeCardFromList">
-        <v-icon color="white">close</v-icon>
+        <v-icon color="white" small="true">close</v-icon>
       </div>
       <v-card-title primary-title>
         <div>
-          <h3 class="headline mb-1">{{title}}</h3>
+          <h3 class="headline mb-3">{{title}}</h3>
           <div>{{ card_text }}</div>
         </div>
       </v-card-title>
@@ -41,9 +41,10 @@ export default {
 <style>
 .close-button {
   position: absolute;
-  top: 6px;
-  right: 15px;
+  top: -5px;
+  right: 5px;
   font-size: 22px;
+  margin-bottom: 0px;
   cursor: pointer;
 }
 </style>
