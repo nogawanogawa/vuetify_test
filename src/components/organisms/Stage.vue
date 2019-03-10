@@ -1,5 +1,5 @@
 <template>
-  <div class="card" draggable="true" @drop="onDrop" @dragstart="onDragStart" @dragover.prevent>
+  <div class="card">
     <v-card color="indigo" class="white--text" width="250">
       <div class="close-button" @click="removeCardFromList">
         <v-icon color="white">close</v-icon>
@@ -33,10 +33,6 @@ export default {
 </script>
 
 <style>
-.card {
-  margin: 5px;
-}
-
 .close-button {
   position: absolute;
   top: 6px;
