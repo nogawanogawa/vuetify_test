@@ -6,13 +6,13 @@
       </div>
       <v-card-title primary-title>
         <div>
-          <h3 class="headline mb-1">Title</h3>
+          <h3 class="headline mb-1">{{title}}</h3>
           <div>{{ card_text }}</div>
         </div>
       </v-card-title>
 
       <v-card-actions>
-        <Dialog/>
+        <Dialog v-bind:title="title" v-bind:detail="detail"></Dialog>
       </v-card-actions>
     </v-card>
   </div>
@@ -26,8 +26,14 @@ export default {
   components: {
     Dialog
   },
+  props: ["title", "detail"],
   data() {
-    return {};
+    return {
+      stage: {
+        title: "",
+        detail: ""
+      }
+    };
   }
 };
 </script>

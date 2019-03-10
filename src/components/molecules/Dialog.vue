@@ -7,14 +7,15 @@
       <v-card class="mx-auto">
         <v-flex xs12>
           <v-toolbar width="40" color="indigo">
+            <v-toolbar-title class="white--text">{{title}}</v-toolbar-title>
             <v-spacer></v-spacer>
             <div class="close-button" @click="dialog = false">
               <v-icon color="white">close</v-icon>
             </div>
           </v-toolbar>
           <div class="textarea">
-            <TitleArea/>
-            <TextArea/>
+            <TitleArea></TitleArea>
+            <TextArea></TextArea>
           </div>
         </v-flex>
 
@@ -37,6 +38,7 @@ export default {
     TextArea,
     TitleArea
   },
+  props: ["title", "detail"],
   data() {
     return {
       dialog: false

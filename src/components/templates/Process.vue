@@ -1,6 +1,12 @@
 <template>
-  <draggable class="process" v-model="array">
-    <Stage class="stage" v-for="(task) in tasks" :key="task"></Stage>
+  <draggable class="process" :options="{animation:400, handle:'.stage'}" v-model="array">
+    <Stage
+      class="stage"
+      v-for="task in tasks"
+      v-bind:key="task"
+      v-bind:title="task.stage.title"
+      v-bind:detail="task.stage.detail"
+    ></Stage>
   </draggable>
 </template>
 
@@ -16,16 +22,7 @@ export default {
   },
   data() {
     return {
-      tasks: [
-        "task1",
-        "task2",
-        "task3",
-        "task4",
-        "task5",
-        "task6",
-        "task7",
-        "task8"
-      ]
+      tasks: this.$store.state.tasks
     };
   }
 };
@@ -34,10 +31,15 @@ export default {
 <style>
 .process {
   padding: 0 0px;
+  margin-left: 60px;
+  margin-right: 15px;
   display: flex;
   overflow-x: scroll;
 }
 .stage {
-  margin-left: 30px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 100px;
+  cursor: move;
 }
 </style>

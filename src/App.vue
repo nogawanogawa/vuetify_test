@@ -25,18 +25,6 @@
       <v-toolbar-title>Application</v-toolbar-title>
     </v-toolbar>
     <v-content>
-      <v-form>
-        <v-container>
-          <v-layout align-start justify-end row>
-            <v-flex xs4 sm6 md3>
-              <v-text-field label="Search"></v-text-field>
-            </v-flex>
-            <v-btn outline small fab color="indigo">
-              <v-icon>search</v-icon>
-            </v-btn>
-          </v-layout>
-        </v-container>
-      </v-form>
       <Process/>
     </v-content>
     <v-footer color="indigo" app>
