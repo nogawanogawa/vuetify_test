@@ -27,7 +27,8 @@
     <v-content>調理工程
       <Process/>
       <v-divider></v-divider>ほげほげ
-      <Cytoscape/>
+      <br>
+      <Tensorboard/>
     </v-content>
     <v-footer color="indigo" app>
       <span class="white--text">&copy; 2017</span>
@@ -37,7 +38,8 @@
 
 <script>
 import Process from "@/components/templates/Process.vue";
-import Cytoscape from "@/components/atoms/Cytoscape.vue";
+//import Cytoscape from "@/components/atoms/Cytoscape.vue";
+import Tensorboard from "@/components/atoms/Tensorboard.vue";
 
 export default {
   name: "app",
@@ -46,7 +48,7 @@ export default {
   }),
   components: {
     Process,
-    Cytoscape
+    Tensorboard
   },
   props: {
     source: String

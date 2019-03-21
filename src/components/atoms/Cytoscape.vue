@@ -6,6 +6,9 @@
 
 <script>
 var cytoscape = require("cytoscape");
+var dagre = require("cytoscape-dagre");
+
+cytoscape.use(dagre);
 
 export default {
   name: "Cytoscape",
@@ -69,7 +72,7 @@ export default {
           }),
 
         layout: {
-          name: "circle",
+          name: "dagre",
           padding: 0
         }
       });
