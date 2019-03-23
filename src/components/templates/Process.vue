@@ -1,13 +1,15 @@
 <template>
-  <draggable class="process" :options="{animation:400, handle:'.stage'}" v-model="array">
-    <Stage
-      class="stage"
-      v-for="task in tasks"
-      v-bind:key="task"
-      v-bind:title="task.stage.title"
-      v-bind:detail="task.stage.detail"
-    ></Stage>
-  </draggable>
+  <div class="processArea">
+    <draggable class="process" :options="{animation:400, handle:'.stage'}" v-model="array">
+      <Stage
+        class="stage"
+        v-for="task in tasks"
+        v-bind:key="task"
+        v-bind:title="task.stage.title"
+        v-bind:detail="task.stage.detail"
+      ></Stage>
+    </draggable>
+  </div>
 </template>
 
 <script>
@@ -29,9 +31,12 @@ export default {
 </script>
 
 <style>
+.processArea {
+  margin-bottom: 10px;
+}
 .process {
   padding: 0 0px;
-  margin-left: 60px;
+  margin-left: 15px;
   margin-right: 15px;
   display: flex;
   overflow-x: scroll;
@@ -39,7 +44,7 @@ export default {
 .stage {
   margin-left: 15px;
   margin-right: 15px;
-  margin-top: 100px;
+  margin-top: 30px;
   cursor: move;
 }
 </style>

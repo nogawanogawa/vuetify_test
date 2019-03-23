@@ -1,3 +1,22 @@
+# Environment 
+
+```
+cd env
+docker-compose up
+docker-compose run vue
+```
+## For Develop
+
+```
+docker-compose run -p 8080:8080 vue
+```
+
+## For Demo
+```
+docker-compose run -p 8080:8080 vue -c "npm run serve"
+```
+
+
 # vuetify
 
 ## Project setup
