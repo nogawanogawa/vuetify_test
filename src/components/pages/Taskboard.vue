@@ -8,15 +8,14 @@
       <v-toolbar-title>Application</v-toolbar-title>
     </v-toolbar>
     <v-content>
-      調理工程
+      <SearchStateBoard/>
+      <v-divider></v-divider>調理工程
       <Process/>
-      <v-divider></v-divider>ほげほげ
+      <v-divider></v-divider>
       <br>
-      <Tensorboard/>
+      <Result/>
     </v-content>
-    <v-footer color="indigo" app>
-      <span class="white--text">&copy; 2017</span>
-    </v-footer>
+    <Footer/>
   </v-app>
 </template>
 
@@ -24,20 +23,29 @@
 import Process from "@/components/templates/Process.vue";
 import SideBar from "@/components/organisms/SideBar.vue";
 //import Cytoscape from "@/components/atoms/Cytoscape.vue";
-import Tensorboard from "@/components/atoms/Tensorboard.vue";
+//import Tensorboard from "@/components/atoms/Tensorboard.vue";
+import Result from "@/components/organisms/Result.vue";
+import Footer from "@/components/organisms/Footer.vue";
+import SearchStateBoard from "@/components/templates/SearchStateBoard.vue";
 
 export default {
+  data() {
+    return {
+      drawer: null
+    };
+  },
   name: "Taskboard",
-  data: () => ({
-    drawer: null
-  }),
   components: {
     Process,
     SideBar,
-    Tensorboard
+    Result,
+    Footer,
+    SearchStateBoard
   },
   props: {
     source: String
   }
 };
 </script>
+<style>
+</style>

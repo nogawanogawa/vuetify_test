@@ -7,7 +7,7 @@
             v-model="select"
             :items="items"
             :error-messages="selectErrors"
-            label="Item"
+            label="Category"
             required
             @change="$v.select.$touch()"
             @blur="$v.select.$touch()"
@@ -17,15 +17,11 @@
 
       <v-layout>
         <v-flex xs12 md6>
-          <v-text-field v-model="firstname" label="First name"></v-text-field>
+          <v-text-field v-model="firstname" label="Product"></v-text-field>
         </v-flex>
 
         <v-flex xs12 md6>
-          <v-text-field v-model="lastname" label="Last name"></v-text-field>
-        </v-flex>
-
-        <v-flex xs12 md6>
-          <v-text-field v-model="email" label="E-mail"></v-text-field>
+          <v-text-field v-model="email" label="Size"></v-text-field>
         </v-flex>
       </v-layout>
 

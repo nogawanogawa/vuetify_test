@@ -3,7 +3,7 @@ import Taskboard from "@/components/pages/Taskboard.vue"
 
 export default [{
     path: '/',
-    redirect: 'Search'
+    redirect: 'Taskboard'
 }, {
     path: '/Search',
     component: Search

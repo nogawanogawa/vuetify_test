@@ -10,9 +10,7 @@
     <v-content>
       <SearchForm/>
     </v-content>
-    <v-footer color="indigo" app>
-      <span class="white--text">&copy; 2019</span>
-    </v-footer>
+    <Footer/>
   </v-app>
 </template>
 
@@ -20,6 +18,7 @@
 import SideBar from "@/components/organisms/SideBar.vue";
 import SearchForm from "@/components/templates/SearchForm.vue";
 ///import Cytoscape from "@/components/atoms/Cytoscape.vue";
+import Footer from "@/components/organisms/Footer.vue";
 
 export default {
   name: "SearchPage",
@@ -28,7 +27,8 @@ export default {
   }),
   components: {
     SideBar,
-    SearchForm
+    SearchForm,
+    Footer
   },
   props: {
     source: String
