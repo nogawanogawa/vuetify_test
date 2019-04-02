@@ -3,9 +3,12 @@
     <v-container fluid grid-list-lg fill-height pa-2>
       <v-layout fill-height>
         <v-flex xs12>
-          <v-card color="indigo" class="white--text">
+          <v-card class="white--text">
+            <v-toolbar flat="true" color="blue darken-3" height="40px">
+              <v-toolbar-title class="bar">材料</v-toolbar-title>
+              <v-spacer></v-spacer>
+            </v-toolbar>
             <v-card-title primary-title>
-              <div class="headline">材料</div>
               <div class="table">
                 <v-data-table
                   :headers="headers"

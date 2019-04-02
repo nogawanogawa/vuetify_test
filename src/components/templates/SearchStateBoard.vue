@@ -1,8 +1,8 @@
 <template>
   <v-layout>
-    <v-flex xs12 sm6 offset-sm3>
+    <v-flex xs12>
       <v-card class="card">
-        <v-toolbar color="primary">
+        <v-toolbar flat="true" color="deep-purple" height="40px">
           <v-toolbar-title class="bar">検索</v-toolbar-title>
           <v-spacer></v-spacer>
         </v-toolbar>

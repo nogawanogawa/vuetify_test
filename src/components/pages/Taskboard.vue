@@ -9,10 +9,7 @@
     </v-toolbar>
     <v-content>
       <SearchStateBoard/>
-      <v-divider></v-divider>調理工程
       <Process/>
-      <v-divider></v-divider>
-      <br>
       <Result/>
     </v-content>
     <Footer/>

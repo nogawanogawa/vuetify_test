@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <v-card color="indigo" class="white--text" height="140px">
+    <v-card color="primary" class="white--text" height="140px">
       <div class="close-button" @click="removeCardFromList">
         <v-icon color="white" small="true">close</v-icon>
       </div>
